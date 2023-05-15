@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Brent R. NASCAR Pool</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link href="main.css" rel="stylesheet" />
+
+    <!-- Javascript link -->
+    <script src="main.js"></script>
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <!-- Brand Logo -->
+        <img class="" src="images/nascarLogoSmall.png" alt="Nascar 75th Logo" />
+        <!-- Menu Button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Menu Content -->
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <p id="poolStandings" class="nav-link" href="" \>Pool Standings</p>
+            </li>
+            <li class="nav-item">
+              <p id="driverStandings" class="nav-link" href="">Cup Standings</p>
+            </li>
+          </ul>
+        </div>
+        <!-- Small Brand Logo -->
+        <img
+          class="d-none d-lg-block"
+          src="images/nascarCupLogoSmall.png"
+          alt="Nascar Cup Series Logo"
+        />
+      </div>
+    </nav>
+
+    <!-- main container -->
+    <main>
+      <div class="container mx-auto text-center">
+        <h1 id="title">2023 NASCAR Pool Standings</h1>
+        <h3 id="subtitle">10 of 36 Races Completed</h3>
+        <table class="table">
+          <input
+            id="searchBar"
+            type="text"
+            class="form-control border border-dark"
+            placeholder="Search Sandings..."
+          />
+          <thead id="tableHeader"></thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </main>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
