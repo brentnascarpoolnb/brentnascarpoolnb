@@ -93,6 +93,7 @@ function DisplayStandings() {
   let bodyHtml = "";
 
   headHtml += "<tr class=''>";
+  headHtml += "<th class=''>Pos</th>";
   headHtml += "<th class=''>Car</th>";
   headHtml += "<th class=''>Driver</th>";
   headHtml += "<th class=''>Manufacturer</th>";
@@ -106,12 +107,14 @@ function DisplayStandings() {
   headHtml += "</tr>";
 
   tableHead.innerHTML = headHtml;
+  let i = 1;
 
   for (let [key, value] of standings) {
     if (value.rank != "-") {
       let record = value;
       let stats = value.stats;
       bodyHtml += "<tr class=''>";
+      bodyHtml += "<td class=''>" + (i) + "</td>";
       bodyHtml +=
         "<th class='' colspan='2'>" +
         record.car +
@@ -119,7 +122,17 @@ function DisplayStandings() {
         record.driver +
         "</th>";
       bodyHtml += "<th class='col'>" + manufacturers.get(stats.mfr) + "</th>";
-      bodyHtml += "<td class=''>" + stats.points + "</td>";
+      //correct points injured drivers
+      if (record.car == 9) {
+        points = stats.points - 112;
+        bodyHtml += "<td class=''>" + points + "</td>";
+      } else if (record.car == 48) {
+        points = stats.points - 46;
+        bodyHtml += "<td class=''>" + points + "</td>";
+      } else {
+        bodyHtml += "<td class=''>" + stats.points + "</td>";
+      }
+
       bodyHtml += "<td class=''>" + stats.starts + "</td>";
       bodyHtml += "<td class=''>" + stats.wins + "</td>";
       bodyHtml += "<td class=''>" + stats.top5 + "</td>";
@@ -127,6 +140,7 @@ function DisplayStandings() {
       bodyHtml += "<td class=''>" + stats.dnfs + "</td>";
       bodyHtml += "<td class=''>" + stats.stageWins + "</td>";
       bodyHtml += "</tr>";
+      i++;
     }
   }
 
