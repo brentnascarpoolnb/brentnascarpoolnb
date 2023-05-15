@@ -35,7 +35,7 @@ function DisplayEntries() {
   headHtml += "<tr class=''>";
   headHtml += "<th class='sortable'>Position</th>";
   headHtml += "<th class='sortable'>Team</th>";
-  headHtml += "<th class='sortable'>Points</th>";
+  headHtml += "<th colspan='2' class='sortable'>Points</th>";
   headHtml += "</tr>";
 
   tableHead.innerHTML = headHtml;
@@ -46,17 +46,44 @@ function DisplayEntries() {
   
   for (let i = 0; i < sortedEntries.length; i++) {
     let record = sortedEntries[i][1];
-    bodyHtml += "<tr class=''>";
+    bodyHtml += "<tr class='accordion-header'>";
     bodyHtml += "<th class='Position'>" + (i + 1) + "</th>";
     bodyHtml += "<th class='teamNames'>" + record.title + "</th>";
     bodyHtml += "<td class='points'>" + record.points + "</td>";
+    bodyHtml += "<td class='accordion-button collapsed'  data-bs-toggle='collapse' data-bs-target='#record" + i + "'></td>";
     bodyHtml += "</tr>";
+    bodyHtml += "<tr id='record" + i + "' class='accordion-content collapse'>";
+    bodyHtml += "<td class='accordion-body' colspan='4'>";
+    bodyHtml += DisplayEntryDrivers(record);
+    bodyHtml += "</td></tr>";
   }
 
   tableBody.innerHTML = bodyHtml;
+}
 
-  //addSort();
-  //sortBy("points");
+function DisplayEntryDrivers(entry) {
+  let drivers = [];
+  let html = "";
+  for (let i = 0; i < 9; i++) {
+    let driver = standings.get(entry.car[i]);
+    drivers.push(driver);
+  } 
+  html += "<div class='container'><div class='row'>";
+  for (let i = 0; i < 9; i++) {
+    if (i == 0 || i == 3 || i == 6) {
+      html += "<div class='col-lg-4 col-md-6'><ul class='list-group'>";
+    }
+
+    html += "<li class='list-group-item'>";
+    html += drivers[i].car + " " + drivers[i].driver + " " + drivers[i].stats.points;
+    html += "</li>";
+
+    if (i == 2 || i == 5 || i == 8) {
+      html += "</ul></div>";
+    }
+  }
+  html += "</div></div>";
+  return html;
 }
 
 function DisplayStandings() {
@@ -121,7 +148,7 @@ function GetEntries(responseText) {
 
   for (let [key, value] of entries) {
     let points = 0;
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 9; i++) {
       let driver = standings.get(value.car[i]);
       driverPoints = driver.stats.points;
       points = points + parseInt(driverPoints);
