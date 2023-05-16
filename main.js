@@ -2,6 +2,7 @@
 const manufacturers = new Map();
 const entries = new Map();
 const standings = new Map();
+const media = new Map();
 //
 window.onload = function () {
   let searchBar = document.querySelector("#searchBar");
@@ -17,6 +18,7 @@ window.onload = function () {
     AJAXCall("JSON/manufacturers.json", GetManufacturers),
     AJAXCall("JSON/nascarStandings.json", GetStandings),
     AJAXCall("JSON/entriesList.json", GetEntries),
+    AJAXCall("JSON/driverImages.json", GetMedia)
   ])
     .then(function () {
       DisplayEntries(entries); // all AJAX calls are complete, so display the standings
@@ -27,15 +29,21 @@ window.onload = function () {
 };
 
 function DisplayEntries() {
+  let table = document.querySelector("#table")
+  table.classList.remove("table-bordered");
+  table.classList.remove("border-dark");
   let tableHead = document.querySelector("#tableHeader");
   let tableBody = document.querySelector("#tableBody");
+  let title = document.querySelector("#title");
+  title.innerHTML = "2023 NASCAR Pool Standings";
   let headHtml = "";
   let bodyHtml = "";
 
   headHtml += "<tr class=''>";
   headHtml += "<th class='sortable'>Position</th>";
   headHtml += "<th class='sortable'>Team</th>";
-  headHtml += "<th colspan='2' class='sortable'>Points</th>";
+  headHtml += "<th class='sortable'>Points</th>";
+  headHtml += "<th></th>";
   headHtml += "</tr>";
 
   tableHead.innerHTML = headHtml;
@@ -46,13 +54,13 @@ function DisplayEntries() {
   
   for (let i = 0; i < sortedEntries.length; i++) {
     let record = sortedEntries[i][1];
-    bodyHtml += "<tr class='accordion-header'>";
+    bodyHtml += "<tr class='accordion-header hover' data-bs-toggle='collapse' data-bs-target='#record" + i + "'>";
     bodyHtml += "<th class='Position'>" + (i + 1) + "</th>";
     bodyHtml += "<th class='teamNames'>" + record.title + "</th>";
     bodyHtml += "<td class='points'>" + record.points + "</td>";
-    bodyHtml += "<td class='accordion-button collapsed'  data-bs-toggle='collapse' data-bs-target='#record" + i + "'></td>";
+    bodyHtml += "<td class='accordion-button collapsed p-2 m-0'  data-bs-toggle='collapse' data-bs-target='#record" + i + "'></td>";
     bodyHtml += "</tr>";
-    bodyHtml += "<tr id='record" + i + "' class='accordion-content collapse'>";
+    bodyHtml += "<tr id='record" + i + "' class='accordion-content collapse bg-white'>";
     bodyHtml += "<td class='accordion-body' colspan='4'>";
     bodyHtml += DisplayEntryDrivers(record);
     bodyHtml += "</td></tr>";
@@ -64,18 +72,22 @@ function DisplayEntries() {
 function DisplayEntryDrivers(entry) {
   let drivers = [];
   let html = "";
+
   for (let i = 0; i < 9; i++) {
     let driver = standings.get(entry.car[i]);
     drivers.push(driver);
   } 
+
   html += "<div class='container'><div class='row'>";
-  for (let i = 0; i < 9; i++) {
+  
+  for (let i = 0; i < 9; i++) {    
+    let driverMedia = media.get(drivers[i].car);
     if (i == 0 || i == 3 || i == 6) {
       html += "<div class='col-lg-4 col-md-6'><ul class='list-group'>";
     }
 
-    html += "<li class='list-group-item'>";
-    html += drivers[i].car + " " + drivers[i].driver + " " + drivers[i].stats.points;
+    html += "<li class='list-group-item fw-bold bg-white'>";
+    html += driverMedia.carNumberImage + "   " + drivers[i].driver + " - " + drivers[i].stats.points;
     html += "</li>";
 
     if (i == 2 || i == 5 || i == 8) {
@@ -87,8 +99,13 @@ function DisplayEntryDrivers(entry) {
 }
 
 function DisplayStandings() {
+  let table = document.querySelector("#table")
+  table.classList.add("table-bordered");
+  table.classList.add("border-dark");
   let tableHead = document.querySelector("#tableHeader");
   let tableBody = document.querySelector("#tableBody");
+  let title = document.querySelector("#title");
+  title.innerHTML = "2023 NASCAR Driver Standings";
   let headHtml = "";
   let bodyHtml = "";
 
@@ -96,14 +113,14 @@ function DisplayStandings() {
   headHtml += "<th class=''>Pos</th>";
   headHtml += "<th class=''>Car</th>";
   headHtml += "<th class=''>Driver</th>";
-  headHtml += "<th class=''>Manufacturer</th>";
+  headHtml += "<th class='d-none d-md-table-cell'>Manufacturer</th>";
   headHtml += "<th class=''>Points</th>";
-  headHtml += "<th class=''>Starts</th>";
+  headHtml += "<th class='d-none d-md-table-cell'>Starts</th>";
   headHtml += "<th class=''>Wins</th>";
   headHtml += "<th class=''>Top 5</th>";
-  headHtml += "<th class=''>Top 10</th>";
-  headHtml += "<th class=''>DNFs</th>";
-  headHtml += "<th class=''>Stage Wins</th>";
+  headHtml += "<th class='d-none d-md-table-cell'>Top 10</th>";
+  headHtml += "<th class='d-none d-md-table-cell'>DNFs</th>";
+  headHtml += "<th class='d-none d-md-table-cell'>Stage Wins</th>";
   headHtml += "</tr>";
 
   tableHead.innerHTML = headHtml;
@@ -121,7 +138,7 @@ function DisplayStandings() {
         " " +
         record.driver +
         "</th>";
-      bodyHtml += "<th class='col'>" + manufacturers.get(stats.mfr) + "</th>";
+      bodyHtml += "<th class='col d-none d-md-table-cell'>" + manufacturers.get(stats.mfr) + "</th>";
       //correct points injured drivers
       if (record.car == 9) {
         points = stats.points - 112;
@@ -133,12 +150,12 @@ function DisplayStandings() {
         bodyHtml += "<td class=''>" + stats.points + "</td>";
       }
 
-      bodyHtml += "<td class=''>" + stats.starts + "</td>";
+      bodyHtml += "<td class='d-none d-md-table-cell'>" + stats.starts + "</td>";
       bodyHtml += "<td class=''>" + stats.wins + "</td>";
       bodyHtml += "<td class=''>" + stats.top5 + "</td>";
-      bodyHtml += "<td class=''>" + stats.top10 + "</td>";
-      bodyHtml += "<td class=''>" + stats.dnfs + "</td>";
-      bodyHtml += "<td class=''>" + stats.stageWins + "</td>";
+      bodyHtml += "<td class='d-none d-md-table-cell'>" + stats.top10 + "</td>";
+      bodyHtml += "<td class='d-none d-md-table-cell'>" + stats.dnfs + "</td>";
+      bodyHtml += "<td class='d-none d-md-table-cell'>" + stats.stageWins + "</td>";
       bodyHtml += "</tr>";
       i++;
     }
@@ -175,6 +192,11 @@ function GetManufacturers(responseText) {
   let json_data = JSON.parse(responseText);
   let mfrData = json_data.manufacturer;
   mfrData.forEach((Object) => manufacturers.set(Object.mfr, Object.data));
+}
+
+function GetMedia(responseText) {
+  let mediaData = JSON.parse(responseText);
+  mediaData.forEach((Object) => media.set(Object.car, Object));
 }
 
 function AJAXCall(url, callback) {

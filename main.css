@@ -1,3 +1,81 @@
+/* fonts and css variables */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+:root {
+    --bs-body-font-family: 'Ubuntu', sans-serif;
+}
+
 .mfrLogoStandings {
+  max-height: 20px;
+}
+
+.spacer {
+  display: inline-block;
+  width: 1px;
+  height: 40px; /* Adjust the height of the spacer */
+  background-color: darkgray; /* Replace with your preferred spacer color */
+  margin: 0 40px; /* Adjust margin as needed to create spacing around the spacer */
+  vertical-align: middle;
+  content: "";
+}
+
+.driverNum {
     max-height: 20px;
 }
+
+.hover:hover {
+    background-color: #bac0c4; /* Background color on hover */
+  }
+
+main {
+    padding-top: 70px;
+}
+
+@media (min-width: 576px) {
+  .navHighlight {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .navHighlight::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 5px; /* Adjust the height of the expanding border */
+    background-image: linear-gradient(
+      90deg,
+      #ffd659 0%,
+      #e4002b 51.04%,
+      #007ac2 100%
+    ); /* Replace with your desired color gradient */
+    transition: all 0.3s ease;
+  }
+
+  .navHighlight:hover::before {
+    left: 0;
+    width: 100%;
+  }
+}
+
+#topNav {
+    height: 70px;
+  background-image: linear-gradient(
+    90deg,
+    #ffd659 0%,
+    #e4002b 51.04%,
+    #007ac2 100%
+  ); /* Replace with your desired color gradient */
+  background-size: 100% 5px; /* Adjust the second value (5px) to control the thickness of the border */
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+#title {
+    border-bottom: 5px solid #007ac2;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+

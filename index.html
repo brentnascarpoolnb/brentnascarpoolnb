@@ -22,9 +22,9 @@
     <script src="main.js"></script>
   </head>
 
-  <body>
+  <body class="bg-light text-dark">
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg bg-white fixed-top" id="topNav">
       <div class="container-fluid">
         <!-- Brand Logo -->
         <img class="" src="images/nascarLogoSmall.png" alt="Nascar 75th Logo" />
@@ -41,12 +41,24 @@
         <div class="collapse navbar-collapse" id="navmenu">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <p id="poolStandings" class="nav-link" href="" \>
+              <button
+                id="poolStandings"
+                class="nav-link text-dark fw-bold navHighlight"
+                href=""
+                \
+              >
                 Pool Standings
-              </p>
+              </button>
             </li>
+            <li class="spacer d-none d-lg-block"></li>
             <li class="nav-item">
-              <p id="driverStandings" class="nav-link" href="">Cup Standings</p>
+              <button
+                id="driverStandings"
+                class="nav-link text-dark fw-bold navHighlight"
+                href=""
+              >
+                Cup Standings
+              </button>
             </li>
           </ul>
         </div>
@@ -62,19 +74,19 @@
     <!-- main container -->
     <main>
       <div class="container mx-auto text-center">
-        <h1 id="title">2023 NASCAR Pool Standings</h1>
-        <h3 id="subtitle">13 of 36 Races Completed</h3>
-        <table class="table">
+        <h1 class="text-start" id="title">2023 NASCAR Pool Standings</h1>
+        <h3 class="text-end me-5"id="subtitle">Race 13 of 36</h3>
+        <div class="sticky-top">
           <input
             id="searchBar"
             type="text"
-            class="form-control border border-dark"
+            class="form-control border border-dark sticky-top"
             placeholder="Search Standings..."
           />
-          <thead id="tableHeader"></thead>
-          <tbody class="accordion accordion-flush" id="tableBody">
-            
-          </tbody>
+        </div>
+        <table class="table table-sm mt-2" id="table">
+          <thead class="bg-black text-light" id="tableHeader"></thead>
+          <tbody class="accordion accordion-flush" id="tableBody"></tbody>
         </table>
       </div>
     </main>
