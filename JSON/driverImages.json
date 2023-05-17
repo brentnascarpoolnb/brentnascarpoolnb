@@ -116,7 +116,7 @@
   {
     "car": "34",
     "driver": "Michael McDowell",
-    "driverImage": "<img class='driverPicture' src='images/driverImgs/michaelMcDowell.png' alt='A picture of Michael McDowell'/>",
+    "driverImage": "<img class='driverPicture' src='images/driverImgs/michaelMcdowell.png' alt='A picture of Michael McDowell'/>",
     "carNumberImage": "<img class='driverNum' src='images/driverNums/34.png' alt='34'>"
   },
   {
@@ -206,7 +206,7 @@
   {
     "car": "78",
     "driver": "BJ McLeod",
-    "driverImage": "<img class='driverPicture' src='images/driverImgs/bjMcLeod.png' alt='A picture of BJ McLeod'/>",
+    "driverImage": "<img class='driverPicture' src='images/driverImgs/bjMcleod.png' alt='A picture of BJ McLeod'/>",
     "carNumberImage": "<img class='driverNum' src='images/driverNums/78.png' alt='78'>"
   }
 ]
