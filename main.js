@@ -28,6 +28,55 @@ window.onload = function () {
     });
 };
 
+function FillModal() {
+  let driverNum = this.getAttribute('id');
+  let driver = standings.get(parseInt(driverNum));
+  let driverMedia = media.get(driverNum);
+  let driverName = driver.driver.split(" ");
+  let modalLabel = document.querySelector("#modalLabel");
+  let modalDriverImg = document.querySelector("#modalDriverImg");
+  let modalNumber = document.querySelector("#modalNumber");
+  let raceWinsModal = document.querySelector("#raceWinsModal");
+  let firstName = document.querySelector("#firstName");
+  let lastName = document.querySelector("#lastName");
+  let modalMFR = document.querySelector("#modalMfr");
+  let modalWins = document.querySelector("#modalWins");
+  let modalTop5 = document.querySelector("#modalTop5");
+  let modalPoints = document.querySelector("#modalPoints");
+  
+  modalLabel.innerHTML = driver.car + " - " + driver.driver;
+  modalDriverImg.innerHTML = driverMedia.driverImage;
+  modalNumber.src = "images/driverNums/" + driverNum + ".png";
+  modalNumber.alt = driverNum;
+
+  if (driver.stats.wins > 0) {
+    html = "";
+    for (let i = 0; i <driver.stats.wins; i++) {
+      html += "<img class='' src='images/winnerLogo.png' alt='Nascar race winner logo'/>"
+    }
+    raceWinsModal.innerHTML = html;
+  } else {
+    raceWinsModal.innerHTML = "";
+  };
+
+  firstName.innerHTML = driverName[0];
+  lastName.innerHTML = driverName[1];
+  if (driverName.length >= 3) lastName.innerHTML = driverName[1] + " " + driverName[2];
+  let mfr = manufacturers.get(driver.stats.mfr);
+  modalMFR.innerHTML= mfr;
+  modalMFR.classList.add("mfrLogoModal");
+  modalWins.innerHTML = driver.stats.wins;
+  modalTop5.innerHTML = driver.stats.top5;
+  modalPoints.innerHTML = driver.stats.points;
+}
+
+function AddModalEvents() {
+  const carInstances = document.querySelectorAll(".carInstance");
+  carInstances.forEach((elm) => {
+    elm.addEventListener("click", FillModal);
+  });
+}
+
 function DisplayEntries() {
   let table = document.querySelector("#table")
   table.classList.remove("table-bordered");
@@ -67,6 +116,7 @@ function DisplayEntries() {
   }
 
   tableBody.innerHTML = bodyHtml;
+  AddModalEvents();
 }
 
 function DisplayEntryDrivers(entry) {
@@ -86,7 +136,8 @@ function DisplayEntryDrivers(entry) {
       html += "<div class='col-lg-4 col-md-6'><ul class='list-group'>";
     }
 
-    html += "<li class='list-group-item fw-bold bg-white'>";
+    html += "<li id ='" + drivers[i].car + "'class='list-group-item fw-bold bg-white carInstance'" +
+        " data-bs-toggle='modal' data-bs-target='#driverModal'>";
     html += driverMedia.carNumberImage + "   " + drivers[i].driver + " - " + drivers[i].stats.points;
     html += "</li>";
 
@@ -130,7 +181,7 @@ function DisplayStandings() {
     if (value.rank != "-") {
       let record = value;
       let stats = value.stats;
-      bodyHtml += "<tr class=''>";
+      bodyHtml += "<tr id='" + record.car + "'class='carInstance hover'  data-bs-toggle='modal' data-bs-target='#driverModal'>";
       bodyHtml += "<td class=''>" + (i) + "</td>";
       bodyHtml +=
         "<th class='' colspan='2'>" +
@@ -162,6 +213,7 @@ function DisplayStandings() {
   }
 
   tableBody.innerHTML = bodyHtml;
+  AddModalEvents();
 }
 
 function GetStandings(responseText) {
@@ -213,34 +265,6 @@ function AJAXCall(url, callback) {
     };
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
-  });
-}
-
-function sortBy(column) {
-  let columnName = "." + column.toLowerCase();
-  let rows = Array.from(tableBody.querySelectorAll("tr"));
-  rows.shift(); // remove the table header row from the array
-
-  rows.sort(function (a, b) {
-    let aPoints = parseInt(a.querySelector(columnName).textContent);
-    let bPoints = parseInt(b.querySelector(columnName).textContent);
-    return bPoints - aPoints;
-  });
-
-  tableBody.innerHTML = "";
-
-  rows.forEach(function (row) {
-    tableBody.appendChild(row);
-  });
-}
-
-function addSort() {
-  let pointsHeader = document.querySelectorAll(".sortable");
-  pointsHeader.forEach((element) => {
-    let x = element.innerHTML;
-    element.addEventListener("click", function () {
-      sortBy(x);
-    });
   });
 }
 

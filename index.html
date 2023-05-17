@@ -38,8 +38,8 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Menu Content -->
-        <div class="collapse navbar-collapse bg-white" id="navmenu">
-          <ul class="navbar-nav mx-auto">
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav mx-auto bg-white">
             <li class="nav-item">
               <button
                 id="poolStandings"
@@ -75,7 +75,7 @@
     <main>
       <div class="container mx-auto text-center">
         <h1 class="text-start" id="title">2023 NASCAR Pool Standings</h1>
-        <h3 class="text-end me-5"id="subtitle">Race 13 of 36</h3>
+        <h3 class="text-end me-5" id="subtitle">Race 13 of 36</h3>
         <div class="sticky-top">
           <input
             id="searchBar"
@@ -91,10 +91,90 @@
       </div>
     </main>
 
+    <!-- Modal -->
+    <div class="modal fade" id="driverModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- modal header -->
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel">5 - Kyle Larson</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <!-- modal body -->
+          <div class="modal-body">
+            <div class="row g-0">
+              <!-- driver picture -->
+              <div id="modalDriverImg" class="col-3">
+                <img
+                  class="driverPicture"
+                  src="images/driverImgs/kyleLarson.png"
+                  alt="A picture of Ross Chastain"
+                />
+              </div>
+              <!-- stats block -->
+              <div class="col-9 gy-0">
+                <img
+                  id="modalNumber"
+                  class="ms-3"
+                  src="images/driverNums/5.png"
+                  alt="5"
+                />
+                <div id="raceWinsModal">
+                  <img
+                    class=""
+                    src="images/winnerLogo.png"
+                    alt="Nascar race winner logo"
+                  />
+                  <img
+                    class=""
+                    src="images/winnerLogo.png"
+                    alt="Nascar race winner logo"
+                  />
+                </div>
+
+                <h5 id="firstName" class="ms-3 mb-0">Kyle</h5>
+                <div id="modalDivider" class="row">
+                  <h3 id="lastName" class="ms-3 me-0 pe-0 col-5">Larson</h3>
+                  <div class="col-6 m-0 p-0">
+                    <div class="row row-col-3 text-center">
+                      <p class="modalStatHeader pt-2 mb-0">Wins</p>
+                      <p class="modalStatHeader pt-2 mb-0 text-nowrap">Top 5</p>
+                      <p class="modalStatHeader pt-2 mb-0">Points</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div id="modalMfr" class="ms-3 me-0 pe-0 col-5">
+                    <img
+                      class="mfrLogoModal"
+                      src="images/mfr/chevy.png"
+                      alt="The Chevrolet Logo"
+                    />
+                  </div>
+                  <div class="col-6 m-0 p-0">
+                    <div class="row row-col-3 text-center">
+                      <p id="modalWins" class="modalStatHeader mb-2">2</p>
+                      <p id="modalTop5" class="modalStatHeader mb-2 text-nowrap">5</p>
+                      <p id="modalPoints" class="modalStatHeader mb-2">363</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Bootstrap JavaScript Libraries -->
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
   </body>

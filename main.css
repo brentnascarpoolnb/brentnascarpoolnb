@@ -9,6 +9,10 @@
   max-height: 20px;
 }
 
+.mfrLogoModal {
+  max-height: 40px;
+}
+
 .spacer {
   display: inline-block;
   width: 1px;
@@ -23,8 +27,30 @@
     max-height: 20px;
 }
 
+.driverPicture {
+  max-height: 180px;
+}
+
+#modalNumber {
+  max-height: 75px;
+}
+
+.firstName {
+  margin: left 5px;
+}
+
+.lastName {
+  margin: left 5px;
+}
+
+.modalStatHeader {
+  width: 25%;
+  font-weight: bold;
+}
+
 .hover:hover {
     background-color: #bac0c4; /* Background color on hover */
+    cursor: pointer;
   }
 
 main {
@@ -77,5 +103,22 @@ main {
     border-bottom: 5px solid #007ac2;
     margin-left: 5%;
     margin-right: 5%;
+}
+
+#modalDivider {
+  background-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    #ffd659 15%,
+    #e4002b 61.04%,
+    #007ac2 100%
+  ); /* Replace with your desired color gradient */
+  background-size: 100% 1px; /* Adjust the second value (5px) to control the thickness of the border */
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+#raceWinsModal {
+  float: right;
 }
 
