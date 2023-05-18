@@ -2,15 +2,24 @@
   "manufacturer": [
     {
       "mfr": 0,
-      "data": "<img class='mfrLogoStandings' src='images/mfr/chevy.png' alt='The Chevrolet Logo'/>"
+      "data": {
+        "src": "images/mfr/chevy.png",
+        "alt": "The Chevrolet Logo"
+      }
     },
     {
       "mfr": 1,
-      "data": "<img class='mfrLogoStandings' src='images/mfr/ford.png' alt='The Ford Logo'/>"
+      "data": {
+        "src": "images/mfr/ford.png",
+        "alt": "The Ford Logo"
+      }
     },
     {
       "mfr": 2,
-      "data": "<img class='mfrLogoStandings' src='images/mfr/toyota.png' alt='The Toyota Logo'/>"
+      "data": {
+        "src": "images/mfr/toyota.png",
+        "alt": "The Toyota Logo"
+      }
     }
   ]
 }

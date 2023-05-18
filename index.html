@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Brent R. NASCAR Pool</title>
+    <title>Brent NASCAR Pool</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -16,6 +16,8 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
+
+    <!-- main css -->
     <link href="main.css" rel="stylesheet" />
 
     <!-- Javascript link -->
@@ -23,6 +25,7 @@
   </head>
 
   <body class="bg-light text-dark">
+
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg bg-white fixed-top" id="topNav">
       <div class="container-fluid">
@@ -35,7 +38,7 @@
           data-bs-toggle="collapse"
           data-bs-target="#navmenu"
         >
-          <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Menu Content -->
         <div class="collapse navbar-collapse" id="navmenu">
@@ -60,6 +63,16 @@
                 Cup Standings
               </button>
             </li>
+            <li class="spacer d-none d-lg-block"></li>
+            <li class="nav-item">
+              <button
+                id="poolGroups"
+                class="nav-link text-dark fw-bold navHighlight"
+                href=""
+              >
+                Pool Groups
+              </button>
+            </li>
           </ul>
         </div>
         <!-- Small Brand Logo -->
@@ -76,6 +89,7 @@
       <div class="container mx-auto text-center">
         <h1 class="text-start" id="title">2023 NASCAR Pool Standings</h1>
         <h3 class="text-end me-5" id="subtitle">Race 13 of 36</h3>
+        <!-- Search Bar -->
         <div class="sticky-top">
           <input
             id="searchBar"
@@ -84,20 +98,154 @@
             placeholder="Search Standings..."
           />
         </div>
+        <!-- table filled with blank data for laod -->
         <table class="table table-sm mt-2" id="table">
-          <thead class="bg-black text-light" id="tableHeader"></thead>
-          <tbody class="accordion accordion-flush" id="tableBody"></tbody>
-        </table>
+          <thead class="bg-black text-light" id="tableHeader">
+            <tr>
+              <th class="col-3">Position</th>
+              <th class="col-6">Team</th>
+              <th class="col-3">Points</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody class="accordion accordion-flush" id="tableBody">
+            <tr class="tableLoadingBlank"></tr>
+            <tr class="tableLoadingRow">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr><tr class="tableLoadingBlank"></tr>
+            <tr class="tableLoadingRow">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr><tr class="tableLoadingBlank"></tr>
+            <tr class="tableLoadingRow">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr><tr class="tableLoadingBlank"></tr>
+            <tr class="tableLoadingRow">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr><tr class="tableLoadingBlank"></tr>
+            <tr class="tableLoadingRow">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr><tr class="tableLoadingBlank"></tr>
+            <tr class="tableLoadingRow">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr><tr class="tableLoadingBlank"></tr>
+            <tr class="tableLoadingRow">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr><tr class="tableLoadingBlank"></tr>
+            <tr class="tableLoadingRow">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr><tr class="tableLoadingBlank"></tr>
+            <tr class="tableLoadingRow">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr><tr class="tableLoadingBlank"></tr>
+            <tr class="tableLoadingRow">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr><tr class="tableLoadingBlank"></tr>
+            <tr class="tableLoadingRow">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr><tr class="tableLoadingBlank"></tr>
+            <tr class="tableLoadingRow">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr><tr class="tableLoadingBlank"></tr>
+            <tr class="tableLoadingRow">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr><tr class="tableLoadingBlank"></tr>
+            <tr class="tableLoadingRow">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr><tr class="tableLoadingBlank"></tr>
+            <tr class="tableLoadingRow">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr><tr class="tableLoadingBlank"></tr>
+            <tr class="tableLoadingRow">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr><tr class="tableLoadingBlank"></tr>
+            <tr class="tableLoadingRow">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr><tr class="tableLoadingBlank"></tr>
+            <tr class="tableLoadingRow">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>        
       </div>
     </main>
 
+    <!-- Footer -->
+    <footer class="bg-black">
+      <div class="footerContent">
+        <!-- Brand Logo -->
+        <div class="footerLogo pb-3">
+          <img class="" src="images/nascarLogoBig.png" alt="Nascar 75th Logo" />
+        </div>
+        <div class="footerCredits">
+          <p>
+            NASCAR® and its marks are trademarks of the National Association for Stock Car Auto Racing, LLC. All other trademarks are the property of their respective owners.
+          </p>
+        </div>
+      </div>
+    </footer>
+    
     <!-- Modal -->
     <div class="modal fade" id="driverModal" tabindex="-1">
       <div class="modal-dialog">
         <div class="modal-content">
+
           <!-- modal header -->
           <div class="modal-header">
-            <h5 class="modal-title" id="modalLabel">5 - Kyle Larson</h5>
+            <h5 class="modal-title" id="modalLabel">Num - Full Name</h5>
             <button
               type="button"
               class="btn-close"
@@ -105,41 +253,30 @@
               aria-label="Close"
             ></button>
           </div>
+
           <!-- modal body -->
           <div class="modal-body">
             <div class="row g-0">
               <!-- driver picture -->
               <div id="modalDriverImg" class="col-3">
-                <img
-                  class="driverPicture"
-                  src="images/driverImgs/kyleLarson.png"
-                  alt="A picture of Ross Chastain"
-                />
+                <img class="driverPicture" src="images/driverImgs/default.png" 
+                alt="A silhouette of a race car driver"/>
               </div>
               <!-- stats block -->
               <div class="col-9 gy-0">
+                <!-- car number image -->
                 <img
-                  id="modalNumber"
-                  class="ms-3"
-                  src="images/driverNums/5.png"
-                  alt="5"
-                />
+                  id="modalNumber" class="ms-3" src="" alt=""/>
+                <!-- Race wins block -->
                 <div id="raceWinsModal">
-                  <img
-                    class=""
-                    src="images/winnerLogo.png"
-                    alt="Nascar race winner logo"
-                  />
-                  <img
-                    class=""
-                    src="images/winnerLogo.png"
-                    alt="Nascar race winner logo"
-                  />
                 </div>
-
+                <!-- First Name -->
                 <h5 id="firstName" class="ms-3 mb-0">Kyle</h5>
+                <!-- divider -->
                 <div id="modalDivider" class="row">
+                  <!-- last Name -->
                   <h3 id="lastName" class="ms-3 me-0 pe-0 col-5">Larson</h3>
+                  <!-- Stats Header -->
                   <div class="col-6 m-0 p-0">
                     <div class="row row-col-3 text-center">
                       <p class="modalStatHeader pt-2 mb-0">Wins</p>
@@ -149,18 +286,20 @@
                   </div>
                 </div>
                 <div class="row">
+                  <!-- Manufacture Logo -->
                   <div id="modalMfr" class="ms-3 me-0 pe-0 col-5">
                     <img
                       class="mfrLogoModal"
-                      src="images/mfr/chevy.png"
-                      alt="The Chevrolet Logo"
+                      src=""
+                      alt=""
                     />
                   </div>
+                  <!-- Stats Data -->
                   <div class="col-6 m-0 p-0">
                     <div class="row row-col-3 text-center">
-                      <p id="modalWins" class="modalStatHeader mb-2">2</p>
-                      <p id="modalTop5" class="modalStatHeader mb-2 text-nowrap">5</p>
-                      <p id="modalPoints" class="modalStatHeader mb-2">363</p>
+                      <p id="modalWins" class="modalStatHeader mb-2"><span class="modalTextLoading"></span></p>
+                      <p id="modalTop5" class="modalStatHeader mb-2 text-nowrap"><span class="modalTextLoading"></span></p>
+                      <p id="modalPoints" class="modalStatHeader mb-2"><span class="modalTextLoading"></span></p>
                     </div>
                   </div>
                 </div>

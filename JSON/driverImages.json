@@ -3,210 +3,315 @@
     "car": "1",
     "driver": "Ross Chastain",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/rossChastain.png' alt='A picture of Ross Chastain'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/1.png' alt='1'>"
+    "carNumberImage": {
+      "src": "images/driverNums/1.png",
+      "alt": "1"
+    }
   },
   {
     "car": "20",
     "driver": "Christopher Bell",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/christopherBell.png' alt='A picture of Christopher Bell'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/20.png' alt='20'>"
+    "carNumberImage": {
+      "src": "images/driverNums/20.png",
+      "alt": "20"
+    }
   },
   {
     "car": "4",
     "driver": "Kevin Harvick",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/kevinHarvick.png' alt='A picture of Kevin Harvick'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/4.png' alt='4'>"
+    "carNumberImage": {
+      "src": "images/driverNums/4.png",
+      "alt": "4"
+    }
   },
   {
     "car": "19",
     "driver": "Martin Truex Jr",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/martinTruex.png' alt='A picture of Martin Truex, Jr'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/19.png' alt='19'>"
+    "carNumberImage": {
+      "src": "images/driverNums/19.png",
+      "alt": "19"
+    }
   },
   {
     "car": "12",
     "driver": "Ryan Blaney",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/ryanBlaney.png' alt='A picture of Ryan Blaney'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/12.png' alt='12'>"
+    "carNumberImage": {
+      "src": "images/driverNums/12.png",
+      "alt": "12"
+    }
   },
   {
     "car": "45",
     "driver": "Tyler Reddick",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/tylerReddick.png' alt='A picture of Tyler Reddick'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/45.png' alt='45'>"
+    "carNumberImage": {
+      "src": "images/driverNums/45.png",
+      "alt": "45"
+    }
   },
   {
     "car": "11",
     "driver": "Denny Hamlin",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/dennyHamlin.png' alt='A picture of Denny Hamlin'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/11.png' alt='11'>"
+    "carNumberImage": {
+      "src": "images/driverNums/11.png",
+      "alt": "11"
+    }
   },
   {
     "car": "8",
     "driver": "Kyle Busch",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/kyleBusch.png' alt='A picture of Kyle Busch'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/8.png' alt='8'>"
+    "carNumberImage": {
+      "src": "images/driverNums/8.png",
+      "alt": "8"
+    }
   },
   {
     "car": "6",
     "driver": "Brad Keselowski",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/bradKeselowski.png' alt='A picture of Brad Keselowski'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/6.png' alt='6'>"
+    "carNumberImage": {
+      "src": "images/driverNums/6.png",
+      "alt": "6"
+    }
   },
   {
     "car": "5",
     "driver": "Kyle Larson",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/kyleLarson.png' alt='A picture of Kyle Larson'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/5.png' alt='5'>"
+    "carNumberImage": {
+      "src": "images/driverNums/5.png",
+      "alt": "5"
+    }
   },
   {
     "car": "24",
     "driver": "William Byron",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/williamByron.png' alt='A picture of William Byron'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/24.png' alt='24'>"
+    "carNumberImage": {
+      "src": "images/driverNums/24.png",
+      "alt": "24"
+    }
   },
   {
     "car": "17",
     "driver": "Chris Buescher",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/chrisBuescher.png' alt='A picture of Chris Buescher'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/17.png' alt='17'>"
+    "carNumberImage": {
+      "src": "images/driverNums/17.png",
+      "alt": "17"
+    }
   },
   {
     "car": "22",
     "driver": "Joey Logano",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/joeyLogano.png' alt='A picture of Joey Logano'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/22.png' alt='22'>"
+    "carNumberImage": {
+      "src": "images/driverNums/22.png",
+      "alt": "22"
+    }
   },
   {
     "car": "47",
     "driver": "Ricky Stenhouse Jr",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/rickyStenhouse.png' alt='A picture of Ricky Stenhouse Jr'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/47.png' alt='47'>"
+    "carNumberImage": {
+      "src": "images/driverNums/47.png",
+      "alt": "47"
+    }
   },
   {
     "car": "48",
     "driver": "Alex Bowman",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/alexBowman.png' alt='A picture of Alex Bowman'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/48.png' alt='48'>"
+    "carNumberImage": {
+      "src": "images/driverNums/48.png",
+      "alt": "48"
+    }
   },
   {
     "car": "14",
     "driver": "Chase Briscoe",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/chaseBriscoe.png' alt='A picture of Chase Briscoe'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/14.png' alt='14'>"
+    "carNumberImage": {
+      "src": "images/driverNums/14.png",
+      "alt": "14"
+    }
   },
   {
     "car": "99",
-    "driver": "Daniel Suárez",
-    "driverImage": "<img class='driverPicture' src='images/driverImgs/danielSuarez.png' alt='A picture of Daniel Suárez'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/99.png' alt='99'>"
+    "driver": "Daniel Su\u00c3\u00a1rez",
+    "driverImage": "<img class='driverPicture' src='images/driverImgs/danielSuarez.png' alt='A picture of Daniel Su\u00c3\u00a1rez'/>",
+    "carNumberImage": {
+      "src": "images/driverNums/99.png",
+      "alt": "99"
+    }
   },
   {
     "car": "54",
     "driver": "Ty Gibbs",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/tyGibbs.png' alt='A picture of Ty Gibbs'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/54.png' alt='54'>"
+    "carNumberImage": {
+      "src": "images/driverNums/54.png",
+      "alt": "54"
+    }
   },
   {
     "car": "2",
     "driver": "Austin Cindric",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/austinCindric.png' alt='A picture of Austin Cindric'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/2.png' alt='2'>"
+    "carNumberImage": {
+      "src": "images/driverNums/2.png",
+      "alt": "2"
+    }
   },
   {
     "car": "34",
     "driver": "Michael McDowell",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/michaelMcdowell.png' alt='A picture of Michael McDowell'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/34.png' alt='34'>"
+    "carNumberImage": {
+      "src": "images/driverNums/34.png",
+      "alt": "34"
+    }
   },
   {
     "car": "23",
     "driver": "Bubba Wallace",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/bubbaWallace.png' alt='A picture of Bubba Wallace'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/23.png' alt='23'>"
+    "carNumberImage": {
+      "src": "images/driverNums/23.png",
+      "alt": "23"
+    }
   },
   {
     "car": "7",
     "driver": "Corey Lajoie",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/coreyLajoie.png' alt='A picture of Corey Lajoie'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/7.png' alt='7'>"
+    "carNumberImage": {
+      "src": "images/driverNums/7.png",
+      "alt": "7"
+    }
   },
   {
     "car": "38",
     "driver": "Todd Gilliland",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/toddGilliland.png' alt='A picture of Todd Gilliland'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/38.png' alt='38'>"
+    "carNumberImage": {
+      "src": "images/driverNums/38.png",
+      "alt": "38"
+    }
   },
   {
     "car": "43",
     "driver": "Erik Jones",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/erikJones.png' alt='A picture of Erik Jones'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/43.png' alt='43'>"
+    "carNumberImage": {
+      "src": "images/driverNums/43.png",
+      "alt": "43"
+    }
   },
   {
     "car": "10",
     "driver": "Aric Almirola",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/aricAlmirola.png' alt='A picture of Aric Almirola'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/10.png' alt='10'>"
+    "carNumberImage": {
+      "src": "images/driverNums/10.png",
+      "alt": "10"
+    }
   },
   {
     "car": "31",
     "driver": "Justin Haley",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/justinHaley.png' alt='A picture of Justin Haley'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/31.png' alt='31'>"
+    "carNumberImage": {
+      "src": "images/driverNums/31.png",
+      "alt": "31"
+    }
   },
   {
     "car": "16",
     "driver": "AJ Allmendinger",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/ajAllmendinger.png' alt='A picture of AJ Allmendinger'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/16.png' alt='16'>"
+    "carNumberImage": {
+      "src": "images/driverNums/16.png",
+      "alt": "16"
+    }
   },
   {
     "car": "41",
     "driver": "Ryan Preece",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/ryanPreece.png' alt='A picture of Ryan Preece'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/41.png' alt='41'>"
+    "carNumberImage": {
+      "src": "images/driverNums/41.png",
+      "alt": "41"
+    }
   },
   {
     "car": "9",
     "driver": "Chase Elliott",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/chaseElliott.png' alt='A picture of Chase Elliott'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/9.png' alt='9'>"
+    "carNumberImage": {
+      "src": "images/driverNums/9.png",
+      "alt": "9"
+    }
   },
   {
     "car": "21",
     "driver": "Harrison Burton",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/harrisonBurton.png' alt='A picture of Harrison Burton'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/21.png' alt='21'>"
+    "carNumberImage": {
+      "src": "images/driverNums/21.png",
+      "alt": "21"
+    }
   },
   {
     "car": "3",
     "driver": "Austin Dillon",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/austinDillon.png' alt='A picture of Austin Dillon'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/3.png' alt='3'>"
+    "carNumberImage": {
+      "src": "images/driverNums/3.png",
+      "alt": "3"
+    }
   },
   {
     "car": "42",
     "driver": "Noah Gragson",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/noahGragson.png' alt='A picture of Noah Gragson'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/42.png' alt='42'>"
+    "carNumberImage": {
+      "src": "images/driverNums/42.png",
+      "alt": "42"
+    }
   },
   {
     "car": "77",
     "driver": "Ty Dillon",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/tyDillon.png' alt='A picture of Ty Dillon'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/77.png' alt='77'>"
+    "carNumberImage": {
+      "src": "images/driverNums/77.png",
+      "alt": "77"
+    }
   },
   {
     "car": "",
     "driver": "Cody Ware",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/codyWare.png' alt='A picture of Cody Ware'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/' alt=''>"
+    "carNumberImage": {
+      "src": "images/driverNums/",
+      "alt": ""
+    }
   },
   {
     "car": "78",
     "driver": "BJ McLeod",
     "driverImage": "<img class='driverPicture' src='images/driverImgs/bjMcleod.png' alt='A picture of BJ McLeod'/>",
-    "carNumberImage": "<img class='driverNum' src='images/driverNums/78.png' alt='78'>"
+    "carNumberImage": {
+      "src": "images/driverNums/78.png",
+      "alt": "78"
+    }
   }
 ]

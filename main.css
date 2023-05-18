@@ -1,60 +1,74 @@
+/* ***************************************************************** */
 /* fonts and css variables */
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 
 :root {
-    --bs-body-font-family: 'Ubuntu', sans-serif;
+  --bs-body-font-family: "Ubuntu", sans-serif;
 }
 
-.mfrLogoStandings {
-  max-height: 20px;
-}
-
-.mfrLogoModal {
-  max-height: 40px;
-}
-
-.spacer {
-  display: inline-block;
-  width: 1px;
-  height: 40px; /* Adjust the height of the spacer */
-  background-color: darkgray; /* Replace with your preferred spacer color */
-  margin: 0 40px; /* Adjust margin as needed to create spacing around the spacer */
-  vertical-align: middle;
-  content: "";
-}
-
-.driverNum {
-    max-height: 20px;
-}
-
-.driverPicture {
-  max-height: 180px;
-}
-
-#modalNumber {
-  max-height: 75px;
-}
-
-.firstName {
-  margin: left 5px;
-}
-
-.lastName {
-  margin: left 5px;
-}
-
-.modalStatHeader {
-  width: 25%;
-  font-weight: bold;
-}
-
-.hover:hover {
-    background-color: #bac0c4; /* Background color on hover */
-    cursor: pointer;
+/* animation for table load */
+@keyframes tableLoadingAnimation {
+  0% {
+    background-color: #dcdcdc;
+    background-position: -100% 0;
   }
+  50% {
+    background-color: #bfbfbf;
+    background-position: 0% 0;
+  }
+  100% {
+    background-color: #dcdcdc;
+    background-position: 100% 0;
+  }
+}
 
+/* ***************************************************************** */
+/* LOADING CSS */
+.tableLoadingRow {
+  margin-top: 7px;
+  height: 24px;
+  animation: tableLoadingAnimation 1s infinite;
+}
+
+.tableLoadingBlank {
+  height: 5px;
+}
+
+.modalNumLoading {
+  width: 75px;
+  height: 75px;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.modalTextLoading {
+  width: 55px;
+  height: 25px;
+  background-color: rgba(0, 0, 0, 0.15);
+  animation-name: moving-gradient;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+/* ***************************************************************** */
+/* HEADER CSS */
+/* padding for sticky header */
 main {
-    padding-top: 70px;
+  padding-top: 70px;
+}
+
+#topNav {
+  height: 70px;
+  background-image: linear-gradient(
+    90deg,
+    #ffd659 0%,
+    #e4002b 51.04%,
+    #007ac2 100%
+  ); /* Replace with your desired color gradient */
+  background-size: 100% 5px; /* Adjust the second value (5px) to control the thickness of the border */
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 @media (min-width: 576px) {
@@ -86,23 +100,95 @@ main {
   }
 }
 
-#topNav {
-    height: 70px;
+.spacer {
+  display: inline-block;
+  width: 1px;
+  height: 40px; /* Adjust the height of the spacer */
+  background-color: darkgray; /* Replace with your preferred spacer color */
+  margin: 0 40px; /* Adjust margin as needed to create spacing around the spacer */
+  vertical-align: middle;
+  content: "";
+}
+
+/* ***************************************************************** */
+/* TABLE CSS */
+
+.driverNum {
+  max-height: 20px;
+}
+
+.mfrLogoStandings {
+  max-height: 20px;
+}
+
+.hover:hover {
+  background-color: #bac0c4; /* Background color on hover */
+  cursor: pointer;
+}
+
+#title {
+  border-bottom: 5px solid #007ac2;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/* ***************************************************************** */
+/* FOOTER CSS */
+footer {
+  background-color: #000;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footerLogo {
   background-image: linear-gradient(
     90deg,
     #ffd659 0%,
     #e4002b 51.04%,
     #007ac2 100%
   ); /* Replace with your desired color gradient */
-  background-size: 100% 5px; /* Adjust the second value (5px) to control the thickness of the border */
+  background-size: 100% 3px; /* Adjust the second value (5px) to control the thickness of the border */
   background-repeat: no-repeat;
   background-position: bottom;
+  margin-bottom: 10px;
 }
 
-#title {
-    border-bottom: 5px solid #007ac2;
-    margin-left: 5%;
-    margin-right: 5%;
+.footerLogo img {
+  display: block; /* Ensure the logo is treated as a block element */
+  margin: 0 auto; /* Center the logo horizontally */
+}
+
+.footerCredits {
+  width: 90%;
+  display: block; /* Ensure the logo is treated as a block element */
+  margin: 0 auto; /* Center the logo horizontally */
+}
+
+/* ***************************************************************** */
+/* MODAL CSS */
+.driverPicture {
+  max-height: 180px;
+}
+
+.firstName {
+  margin: left 5px;
+}
+
+.lastName {
+  margin: left 5px;
+}
+
+.modalStatHeader {
+  width: 25%;
+  font-weight: bold;
+}
+
+.mfrLogoModal {
+  max-height: 40px;
+}
+
+#modalNumber {
+  max-height: 75px;
 }
 
 #modalDivider {
@@ -121,4 +207,3 @@ main {
 #raceWinsModal {
   float: right;
 }
-
