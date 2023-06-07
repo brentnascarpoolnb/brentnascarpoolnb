@@ -25,7 +25,6 @@
   </head>
 
   <body class="bg-light text-dark">
-
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg bg-white fixed-top" id="topNav">
       <div class="container-fluid">
@@ -38,7 +37,7 @@
           data-bs-toggle="collapse"
           data-bs-target="#navmenu"
         >
-        <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Menu Content -->
         <div class="collapse navbar-collapse" id="navmenu">
@@ -89,6 +88,18 @@
       <div class="container mx-auto text-center">
         <h1 class="text-start" id="title">2023 NASCAR Pool Standings</h1>
         <h3 class="text-end me-5" id="subtitle">Race 15 of 36</h3>
+
+        <div class="alert alert-dismissible alert-info">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"
+          ></button>
+          <strong>PENALTY</strong> The No. 43 team has been issued an L1-level penalty for a modification to the greenhouse.
+          <br>
+          The penalty is a loss of 60 points and five NASCAR Playoff points to the driver and owner.
+        </div>
+
         <!-- Search Bar -->
         <div class="sticky-top">
           <input
@@ -115,103 +126,120 @@
               <td></td>
               <td></td>
               <td></td>
-            </tr><tr class="tableLoadingBlank"></tr>
+            </tr>
+            <tr class="tableLoadingBlank"></tr>
             <tr class="tableLoadingRow">
               <td></td>
               <td></td>
               <td></td>
               <td></td>
-            </tr><tr class="tableLoadingBlank"></tr>
+            </tr>
+            <tr class="tableLoadingBlank"></tr>
             <tr class="tableLoadingRow">
               <td></td>
               <td></td>
               <td></td>
               <td></td>
-            </tr><tr class="tableLoadingBlank"></tr>
+            </tr>
+            <tr class="tableLoadingBlank"></tr>
             <tr class="tableLoadingRow">
               <td></td>
               <td></td>
               <td></td>
               <td></td>
-            </tr><tr class="tableLoadingBlank"></tr>
+            </tr>
+            <tr class="tableLoadingBlank"></tr>
             <tr class="tableLoadingRow">
               <td></td>
               <td></td>
               <td></td>
               <td></td>
-            </tr><tr class="tableLoadingBlank"></tr>
+            </tr>
+            <tr class="tableLoadingBlank"></tr>
             <tr class="tableLoadingRow">
               <td></td>
               <td></td>
               <td></td>
               <td></td>
-            </tr><tr class="tableLoadingBlank"></tr>
+            </tr>
+            <tr class="tableLoadingBlank"></tr>
             <tr class="tableLoadingRow">
               <td></td>
               <td></td>
               <td></td>
               <td></td>
-            </tr><tr class="tableLoadingBlank"></tr>
+            </tr>
+            <tr class="tableLoadingBlank"></tr>
             <tr class="tableLoadingRow">
               <td></td>
               <td></td>
               <td></td>
               <td></td>
-            </tr><tr class="tableLoadingBlank"></tr>
+            </tr>
+            <tr class="tableLoadingBlank"></tr>
             <tr class="tableLoadingRow">
               <td></td>
               <td></td>
               <td></td>
               <td></td>
-            </tr><tr class="tableLoadingBlank"></tr>
+            </tr>
+            <tr class="tableLoadingBlank"></tr>
             <tr class="tableLoadingRow">
               <td></td>
               <td></td>
               <td></td>
               <td></td>
-            </tr><tr class="tableLoadingBlank"></tr>
+            </tr>
+            <tr class="tableLoadingBlank"></tr>
             <tr class="tableLoadingRow">
               <td></td>
               <td></td>
               <td></td>
               <td></td>
-            </tr><tr class="tableLoadingBlank"></tr>
+            </tr>
+            <tr class="tableLoadingBlank"></tr>
             <tr class="tableLoadingRow">
               <td></td>
               <td></td>
               <td></td>
               <td></td>
-            </tr><tr class="tableLoadingBlank"></tr>
+            </tr>
+            <tr class="tableLoadingBlank"></tr>
             <tr class="tableLoadingRow">
               <td></td>
               <td></td>
               <td></td>
               <td></td>
-            </tr><tr class="tableLoadingBlank"></tr>
+            </tr>
+            <tr class="tableLoadingBlank"></tr>
             <tr class="tableLoadingRow">
               <td></td>
               <td></td>
               <td></td>
               <td></td>
-            </tr><tr class="tableLoadingBlank"></tr>
+            </tr>
+            <tr class="tableLoadingBlank"></tr>
             <tr class="tableLoadingRow">
               <td></td>
               <td></td>
               <td></td>
               <td></td>
-            </tr><tr class="tableLoadingBlank"></tr>
+            </tr>
+            <tr class="tableLoadingBlank"></tr>
             <tr class="tableLoadingRow">
               <td></td>
               <td></td>
               <td></td>
               <td></td>
-            </tr><tr class="tableLoadingBlank"></tr>
+            </tr>
+            <tr class="tableLoadingBlank"></tr>
             <tr class="tableLoadingRow">
               <td></td>
               <td></td>
               <td></td>
               <td></td>
-            </tr><tr class="tableLoadingBlank"></tr>
+            </tr>
+            <tr class="tableLoadingBlank"></tr>
             <tr class="tableLoadingRow">
               <td></td>
               <td></td>
@@ -219,7 +247,7 @@
               <td></td>
             </tr>
           </tbody>
-        </table>        
+        </table>
       </div>
     </main>
 
@@ -232,17 +260,18 @@
         </div>
         <div class="footerCredits">
           <p>
-            NASCAR® and its marks are trademarks of the National Association for Stock Car Auto Racing, LLC. All other trademarks are the property of their respective owners.
+            NASCAR® and its marks are trademarks of the National Association for
+            Stock Car Auto Racing, LLC. All other trademarks are the property of
+            their respective owners.
           </p>
         </div>
       </div>
     </footer>
-    
+
     <!-- Modal -->
     <div class="modal fade" id="driverModal" tabindex="-1">
       <div class="modal-dialog">
         <div class="modal-content">
-
           <!-- modal header -->
           <div class="modal-header">
             <h5 class="modal-title" id="modalLabel">Num - Full Name</h5>
@@ -259,17 +288,18 @@
             <div class="row g-0">
               <!-- driver picture -->
               <div id="modalDriverImg" class="col-3">
-                <img class="driverPicture" src="images/driverImgs/default.png" 
-                alt="A silhouette of a race car driver"/>
+                <img
+                  class="driverPicture"
+                  src="images/driverImgs/default.png"
+                  alt="A silhouette of a race car driver"
+                />
               </div>
               <!-- stats block -->
               <div class="col-9 gy-0">
                 <!-- car number image -->
-                <img
-                  id="modalNumber" class="ms-3" src="" alt=""/>
+                <img id="modalNumber" class="ms-3" src="" alt="" />
                 <!-- Race wins block -->
-                <div id="raceWinsModal">
-                </div>
+                <div id="raceWinsModal"></div>
                 <!-- First Name -->
                 <h5 id="firstName" class="ms-3 mb-0">Kyle</h5>
                 <!-- divider -->
@@ -288,18 +318,23 @@
                 <div class="row">
                   <!-- Manufacture Logo -->
                   <div id="modalMfr" class="ms-3 me-0 pe-0 col-5">
-                    <img
-                      class="mfrLogoModal"
-                      src=""
-                      alt=""
-                    />
+                    <img class="mfrLogoModal" src="" alt="" />
                   </div>
                   <!-- Stats Data -->
                   <div class="col-6 m-0 p-0">
                     <div class="row row-col-3 text-center">
-                      <p id="modalWins" class="modalStatHeader mb-2"><span class="modalTextLoading"></span></p>
-                      <p id="modalTop5" class="modalStatHeader mb-2 text-nowrap"><span class="modalTextLoading"></span></p>
-                      <p id="modalPoints" class="modalStatHeader mb-2"><span class="modalTextLoading"></span></p>
+                      <p id="modalWins" class="modalStatHeader mb-2">
+                        <span class="modalTextLoading"></span>
+                      </p>
+                      <p
+                        id="modalTop5"
+                        class="modalStatHeader mb-2 text-nowrap"
+                      >
+                        <span class="modalTextLoading"></span>
+                      </p>
+                      <p id="modalPoints" class="modalStatHeader mb-2">
+                        <span class="modalTextLoading"></span>
+                      </p>
                     </div>
                   </div>
                 </div>
