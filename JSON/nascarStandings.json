@@ -375,21 +375,6 @@
     "rank": "25"
   },
   {
-    "car": "43",
-    "driver": "Erik Jones",
-    "stats": {
-      "mfr": 0,
-      "points": "245",
-      "starts": "15",
-      "wins": "0",
-      "top5": "0",
-      "top10": "2",
-      "dnfs": "2",
-      "stageWins": "0"
-    },
-    "rank": "26"
-  },
-  {
     "car": "41",
     "driver": "Ryan Preece",
     "stats": {
@@ -448,6 +433,21 @@
       "stageWins": "0"
     },
     "rank": "29"
+  },
+  {
+    "car": "43",
+    "driver": "Erik Jones",
+    "stats": {
+      "mfr": 0,
+      "points": "185",
+      "starts": "15",
+      "wins": "0",
+      "top5": "0",
+      "top10": "2",
+      "dnfs": "2",
+      "stageWins": "0"
+    },
+    "rank": "26"
   },
   {
     "car": "14",
