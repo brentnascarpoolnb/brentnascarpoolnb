@@ -244,10 +244,16 @@ function DisplayStandings() {
       bodyHtml += "<th class='col d-none d-md-table-cell'>" + mfrImg + "</th>";
       //correct points injured drivers
       if (record.car == 9) {
-        points = stats.points - 128;
+        points = stats.points - 112;
         bodyHtml += "<td class=''>" + points + "</td>";
       } else if (record.car == 48) {
         points = stats.points - 46;
+        bodyHtml += "<td class=''>" + points + "</td>";
+      }  else if (record.car == 42) {
+          points = stats.points - 11;
+          bodyHtml += "<td class=''>" + points + "</td>";
+      } else if (record.car == 78) {
+        points = stats.points - 2;
         bodyHtml += "<td class=''>" + points + "</td>";
       } else {
         bodyHtml += "<td class=''>" + stats.points + "</td>";
