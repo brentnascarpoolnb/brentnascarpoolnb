@@ -244,7 +244,7 @@ function DisplayStandings() {
       bodyHtml += "<th class='col d-none d-md-table-cell'>" + mfrImg + "</th>";
       //correct points injured drivers
       if (record.car == 9) {
-        points = stats.points - 128;
+        points = stats.points - 112;
         bodyHtml += "<td class=''>" + points + "</td>";
       } else if (record.car == 48) {
         points = stats.points - 46;
