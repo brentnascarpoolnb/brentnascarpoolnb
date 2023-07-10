@@ -48,8 +48,7 @@ window.onload = function () {
 function FillModal() {
   //get data
   let driverNum = this.getAttribute("id");
-  let driver = standings.get(parseInt(driverNum));
-  let driverMedia = media.get(driverNum);
+  let { driver, driverMedia } = GetDriver(driverNum);
   let driverName = driver.driver.split(" ");
 
   //get fields
@@ -69,7 +68,7 @@ function FillModal() {
   modalDriverImg.innerHTML = driverMedia.driverImage;
   modalNumber.src = driverMedia.carNumberImage.src;
   modalNumber.alt = driverMedia.carNumberImage.alt;
-  let mfr = manufacturers.get(driver.stats.mfr);
+  let mfr = getMfr(driver);
   modalWins.innerHTML = driver.stats.wins;
   modalTop5.innerHTML = driver.stats.top5;
   modalPoints.innerHTML = driver.stats.points;
@@ -104,6 +103,7 @@ function AddModalEvents() {
 }
 
 function DisplayEntries() {
+  //Build Table Header
   let table = document.querySelector("#table");
   table.classList.remove("table-bordered");
   table.classList.remove("border-dark");
@@ -123,6 +123,7 @@ function DisplayEntries() {
 
   tableHead.innerHTML = headHtml;
 
+  //Fill Table
   let sortedEntries = Array.from(entries.entries()).sort(
     (a, b) => b[1].points - a[1].points
   );
@@ -153,34 +154,38 @@ function DisplayEntries() {
 }
 
 function DisplayEntryDrivers(entry) {
-  let drivers = [];
+  let drivers = []; //array for drivers
   let html = "";
 
   for (let i = 0; i < 9; i++) {
-    let driver = standings.get(entry.car[i]);
+    let driver = GetDriver(entry.car[i]);
     drivers.push(driver);
   }
 
   html += "<div class='container'><div class='row'>";
 
   for (let i = 0; i < 9; i++) {
-    let driverMedia = media.get(drivers[i].car);
     if (i == 0 || i == 3 || i == 6) {
       html += "<div class='col-lg-4 col-md-6'><ul class='list-group'>";
     }
 
     html +=
       "<li id ='" +
-      drivers[i].car +
+      drivers[i].driver.car +
       "'class='list-group-item fw-bold bg-white carInstance hover'" +
       " data-bs-toggle='modal' data-bs-target='#driverModal'>";
     let img =
       "<img class='driverNum' src='" +
-      driverMedia.carNumberImage.src +
+      drivers[i].driverMedia.carNumberImage.src +
       "' alt='" +
-      driverMedia.carNumberImage.alt +
+      drivers[i].driverMedia.carNumberImage.alt +
       "'/>";
-    html += img + "   " + drivers[i].driver + " - " + drivers[i].stats.points;
+    html +=
+      img +
+      "   " +
+      drivers[i].driver.driver +
+      " - " +
+      drivers[i].driver.stats.points;
     html += "</li>";
 
     if (i == 2 || i == 5 || i == 8) {
@@ -219,61 +224,43 @@ function DisplayStandings() {
   tableHead.innerHTML = headHtml;
   let i = 1;
 
-  for (let [key, value] of standings) {
-    if (value.rank != "-") {
-      let record = value;
-      let stats = value.stats;
-      bodyHtml +=
-        "<tr id='" +
-        record.car +
-        "'class='carInstance hover'  data-bs-toggle='modal' data-bs-target='#driverModal'>";
-      bodyHtml += "<td class=''>" + i + "</td>";
-      bodyHtml +=
-        "<th class='' colspan='2'>" +
-        record.car +
-        " " +
-        record.driver +
-        "</th>";
-      let mfr = manufacturers.get(stats.mfr);
-      let mfrImg =
-        "<img class='mfrLogoModal' src='" +
-        mfr.src +
-        "' alt='" +
-        mfr.alt +
-        "'/>";
-      bodyHtml += "<th class='col d-none d-md-table-cell'>" + mfrImg + "</th>";
-      //correct points injured drivers
-      if (record.car == 9) {
-        points = stats.points - 112;
-        bodyHtml += "<td class=''>" + points + "</td>";
-      } else if (record.car == 48) {
-        points = stats.points - 46;
-        bodyHtml += "<td class=''>" + points + "</td>";
-      }  else if (record.car == 42) {
-          points = stats.points - 11;
-          bodyHtml += "<td class=''>" + points + "</td>";
-      } else if (record.car == 78) {
-        points = stats.points - 2;
-        bodyHtml += "<td class=''>" + points + "</td>";
-      } else {
-        bodyHtml += "<td class=''>" + stats.points + "</td>";
-      }
+  //Fill Table
+  RemovePoints();
+  let sortedStandings = Array.from(standings.entries()).sort(
+    (a, b) => b[1].stats.points - a[1].stats.points
+  );
 
-      bodyHtml +=
-        "<td class='d-none d-md-table-cell'>" + stats.starts + "</td>";
-      bodyHtml += "<td class=''>" + stats.wins + "</td>";
-      bodyHtml += "<td class=''>" + stats.top5 + "</td>";
-      bodyHtml += "<td class='d-none d-md-table-cell'>" + stats.top10 + "</td>";
-      bodyHtml += "<td class='d-none d-md-table-cell'>" + stats.dnfs + "</td>";
-      bodyHtml +=
-        "<td class='d-none d-md-table-cell'>" + stats.stageWins + "</td>";
-      bodyHtml += "</tr>";
-      i++;
-    }
-  }
+  sortedStandings.forEach((entry, index) => {
+    let [carNumber, record] = entry;
+    let stats = record.stats;
+    let points = stats.points;
+    let mfr = getMfr(record);
+
+    bodyHtml +=
+      "<tr id='" +
+      carNumber +
+      "' class='carInstance hover' data-bs-toggle='modal' data-bs-target='#driverModal'>";
+    bodyHtml += "<td class=''>" + (index + 1) + "</td>";
+    bodyHtml +=
+      "<th class='' colspan='2'>" + carNumber + " " + record.driver + "</th>";
+    let mfrImg =
+      "<img class='mfrLogoModal' src='" + mfr.src + "' alt='" + mfr.alt + "'/>";
+    bodyHtml += "<th class='col d-none d-md-table-cell'>" + mfrImg + "</th>";
+    bodyHtml += "<td class=''>" + points + "</td>";
+    bodyHtml += "<td class='d-none d-md-table-cell'>" + stats.starts + "</td>";
+    bodyHtml += "<td class=''>" + stats.wins + "</td>";
+    bodyHtml += "<td class=''>" + stats.top5 + "</td>";
+    bodyHtml += "<td class='d-none d-md-table-cell'>" + stats.top10 + "</td>";
+    bodyHtml += "<td class='d-none d-md-table-cell'>" + stats.dnfs + "</td>";
+    bodyHtml +=
+      "<td class='d-none d-md-table-cell'>" + stats.stageWins + "</td>";
+    bodyHtml += "</tr>";
+  });
 
   tableBody.innerHTML = bodyHtml;
   AddModalEvents();
+  
+  AddPoints();
 }
 
 function DisplayBracket() {
@@ -295,20 +282,21 @@ function DisplayBracket() {
 
   bodyHtml += "<tr class=''>";
   bodyHtml += "<td class=''>";
-  bodyHtml += "<div class='container'><div class='row row-cols-lg-3 row-cols-md-1'>";
+  bodyHtml +=
+    "<div class='container'><div class='row row-cols-lg-3 row-cols-md-1'>";
 
   for (let i = 0; i < 9; i++) {
     bodyHtml += "<div class='col'>";
     bodyHtml += htmlArray[i];
     bodyHtml += "</div>";
-  };
+  }
 
   bodyHtml += "</td></tr></div></div>";
 
   tableBody.innerHTML = bodyHtml;
 }
 
-function BuildGroupTables () {
+function BuildGroupTables() {
   let htmlArray = [];
   let i = 1;
 
@@ -316,21 +304,25 @@ function BuildGroupTables () {
     let group = Object.group;
     let html = "";
     html += "<table class='table table-sm'>";
-    html += "<tr class='bg-black fw-bold text-white'><th class='' colspan='3'>Group " + i +"</th></tr>";
+    html +=
+      "<tr class='bg-black fw-bold text-white'><th class='' colspan='3'>Group " +
+      i +
+      "</th></tr>";
     html += "<tr class=''>";
     html += "<th class=''>Number</th>";
     html += "<th class=''>Driver</th>";
     html += "<th class=''>Points</th>";
     html += "</tr>";
     group.forEach((carNum) => {
-      let driver = standings.get(parseInt(carNum));
-      let driverMedia = media.get(driver.car);
+      //get data
+      let { driver, driverMedia } = GetDriver(carNum);
+
       let img =
-      "<img class='driverNum' src='" +
-      driverMedia.carNumberImage.src +
-      "' alt='" +
-      driverMedia.carNumberImage.alt +
-      "'/>";
+        "<img class='driverNum' src='" +
+        driverMedia.carNumberImage.src +
+        "' alt='" +
+        driverMedia.carNumberImage.alt +
+        "'/>";
       html += "<tr class=''>";
       html += "<td class=''>" + img + "</td>";
       html += "<td class=''>" + driver.driver + "</td>";
@@ -344,12 +336,113 @@ function BuildGroupTables () {
   return htmlArray;
 }
 
+function AddPoints () {
+  // Correct points for specific car numbers
+  let elliot = standings.get(9);
+  elliot.stats.points += 112;
+  standings.set(9, elliot);
+
+  let bowman = standings.get(48);
+  bowman.stats.points += 46;
+  standings.set(48, bowman);
+
+  let gregson = standings.get(42);
+  gregson.stats.points += 11;
+  standings.set(42, gregson);
+}
+
+function RemovePoints () {
+  // Correct points for specific car numbers
+  let elliot = standings.get(9);
+  elliot.stats.points -= 112;
+  standings.set(9, elliot);
+
+  let bowman = standings.get(48);
+  bowman.stats.points -= 46;
+  standings.set(48, bowman);
+
+  let gregson = standings.get(42);
+  gregson.stats.points -= 11;
+  standings.set(42, gregson);
+}
+
+function GetDriver(driverNum) {
+  let num = parseInt(driverNum);
+  let driver, driverMedia;
+
+  try {
+    driver = standings.get(num);
+  } catch (error) {
+    console.error("Error occurred while getting driver:", error);
+    driver = {
+      car: "000",
+      driver: "Nascar Driver",
+      stats: {
+        mfr: 0,
+        points: 0,
+        starts: 0,
+        wins: 0,
+        top5: 0,
+        top10: 0,
+        dnfs: 0,
+        stageWins: 0,
+      },
+      rank: "999",
+    };
+  }
+
+  try {
+    driverMedia = media.get(num);
+  } catch (error) {
+    console.error("Error occurred while getting driver media:", error);
+    driverMedia = {
+      car: "000",
+      driver: "Nascar Driver",
+      driverImage:
+        "<img class='driverPicture' src='images/driverImgs/default.png' alt='A silhouette of a race car driver'/>",
+      carNumberImage: {
+        src: "images/driverNums/1.png",
+        alt: "1",
+      },
+    };
+  }
+
+  return { driver, driverMedia };
+}
+
+function getMfr(driver) {
+  let mfr;
+  try {
+    mfr = manufacturers.get(driver.stats.mfr);
+  } catch (error) {
+    console.error("Error occurred while getting driver:", error);
+    mfr = {
+      mfr: 0,
+      data: {
+        src: "images/mfr/chevy.png",
+        alt: "The Chevrolet Logo",
+      },
+    };
+  }
+  return mfr;
+}
+
 function GetStandings(responseText) {
   let json_data = JSON.parse(responseText);
   let standingsData = json_data;
-  standingsData.forEach((Object) =>
-    standings.set(parseInt(Object.car), Object)
-  );
+  standingsData.forEach((object) => {
+    // Convert stats to integers
+    object.stats.mfr = parseInt(object.stats.mfr);
+    object.stats.points = parseInt(object.stats.points);
+    object.stats.starts = parseInt(object.stats.starts);
+    object.stats.wins = parseInt(object.stats.wins);
+    object.stats.top5 = parseInt(object.stats.top5);
+    object.stats.top10 = parseInt(object.stats.top10);
+    object.stats.dnfs = parseInt(object.stats.dnfs);
+    object.stats.stageWins = parseInt(object.stats.stageWins);
+
+    standings.set(parseInt(object.car), object);
+  });
 }
 
 function GetEntries(responseText) {
@@ -360,7 +453,7 @@ function GetEntries(responseText) {
   for (let [key, value] of entries) {
     let points = 0;
     for (let i = 0; i < 9; i++) {
-      let driver = standings.get(value.car[i]);
+      let driver = standings.get(parseInt(value.car[i]));
       driverPoints = driver.stats.points;
       points = points + parseInt(driverPoints);
     }
@@ -376,7 +469,7 @@ function GetManufacturers(responseText) {
 
 function GetMedia(responseText) {
   let mediaData = JSON.parse(responseText);
-  mediaData.forEach((Object) => media.set(Object.car, Object));
+  mediaData.forEach((Object) => media.set(parseInt(Object.car), Object));
 }
 
 function AJAXCall(url, callback) {
