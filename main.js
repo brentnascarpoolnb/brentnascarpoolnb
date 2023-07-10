@@ -32,17 +32,21 @@ window.onload = function () {
   poolGroupsBtn.addEventListener("click", DisplayBracket);
 
   Promise.all([
-    AJAXCall("JSON/manufacturers.json", GetManufacturers),
-    AJAXCall("JSON/nascarStandings.json", GetStandings),
-    AJAXCall("JSON/entriesList.json", GetEntries),
-    AJAXCall("JSON/driverImages.json", GetMedia),
-  ])
-    .then(function () {
-      DisplayEntries(entries); // all AJAX calls are complete, so display the standings
-    })
-    .catch(function (error) {
-      console.error(error); // handle any errors that occurred during the AJAX calls
-    });
+  AJAXCall("JSON/manufacturers.json", GetManufacturers),
+  AJAXCall("JSON/nascarStandings.json", GetStandings)
+])
+  .then(function () {
+    return Promise.all([
+      AJAXCall("JSON/entriesList.json", GetEntries),
+      AJAXCall("JSON/driverImages.json", GetMedia)
+    ]);
+  })
+  .then(function () {
+    DisplayEntries(entries); // All AJAX calls are complete, so display the standings
+  })
+  .catch(function (error) {
+    console.error(error); // Handle any errors that occurred during the AJAX calls
+  });
 };
 
 function FillModal() {
