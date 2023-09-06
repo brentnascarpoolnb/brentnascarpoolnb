@@ -351,7 +351,7 @@ function AddPoints () {
   standings.set(48, bowman);
 
   let gregson = standings.get(42);
-  gregson.stats.points += 14;
+  gregson.stats.points += 77;
   standings.set(42, gregson);
 }
 
