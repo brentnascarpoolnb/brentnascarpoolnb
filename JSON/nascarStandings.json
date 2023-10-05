@@ -1,29 +1,29 @@
 [
   {
-    "car": "5",
-    "driver": "Kyle Larson",
+    "car": "24",
+    "driver": "William Byron",
     "stats": {
       "mfr": 0,
-      "points": "2117",
-      "starts": "28",
-      "wins": "3",
+      "points": "3136",
+      "starts": "31",
+      "wins": "6",
       "top5": "12",
-      "top10": "14",
-      "dnfs": "6",
-      "stageWins": "4"
+      "top10": "17",
+      "dnfs": "3",
+      "stageWins": "8"
     },
     "rank": "1"
   },
   {
-    "car": "45",
-    "driver": "Tyler Reddick",
+    "car": "12",
+    "driver": "Ryan Blaney",
     "stats": {
-      "mfr": 2,
-      "points": "2111",
-      "starts": "28",
+      "mfr": 1,
+      "points": "3078",
+      "starts": "31",
       "wins": "2",
-      "top5": "9",
-      "top10": "13",
+      "top5": "5",
+      "top10": "14",
       "dnfs": "3",
       "stageWins": "4"
     },
@@ -34,236 +34,221 @@
     "driver": "Denny Hamlin",
     "stats": {
       "mfr": 2,
-      "points": "2105",
-      "starts": "28",
-      "wins": "2",
-      "top5": "10",
-      "top10": "13",
+      "points": "3108",
+      "starts": "31",
+      "wins": "3",
+      "top5": "13",
+      "top10": "16",
       "dnfs": "2",
       "stageWins": "7"
     },
     "rank": "3"
   },
   {
-    "car": "24",
-    "driver": "William Byron",
+    "car": "20",
+    "driver": "Christopher Bell",
     "stats": {
-      "mfr": 0,
-      "points": "2097",
-      "starts": "28",
-      "wins": "5",
-      "top5": "10",
-      "top10": "14",
+      "mfr": 2,
+      "points": "3080",
+      "starts": "31",
+      "wins": "1",
+      "top5": "8",
+      "top10": "16",
       "dnfs": "3",
-      "stageWins": "8"
+      "stageWins": "4"
     },
     "rank": "4"
-  },
-  {
-    "car": "6",
-    "driver": "Brad Keselowski",
-    "stats": {
-      "mfr": 1,
-      "points": "2089",
-      "starts": "28",
-      "wins": "0",
-      "top5": "6",
-      "top10": "13",
-      "dnfs": "2",
-      "stageWins": "5"
-    },
-    "rank": "5"
-  },
-  {
-    "car": "12",
-    "driver": "Ryan Blaney",
-    "stats": {
-      "mfr": 1,
-      "points": "2081",
-      "starts": "28",
-      "wins": "1",
-      "top5": "4",
-      "top10": "13",
-      "dnfs": "2",
-      "stageWins": "3"
-    },
-    "rank": "6"
-  },
-  {
-    "car": "8",
-    "driver": "Kyle Busch",
-    "stats": {
-      "mfr": 0,
-      "points": "2080",
-      "starts": "28",
-      "wins": "3",
-      "top5": "8",
-      "top10": "15",
-      "dnfs": "5",
-      "stageWins": "2"
-    },
-    "rank": "7"
-  },
-  {
-    "car": "1",
-    "driver": "Ross Chastain",
-    "stats": {
-      "mfr": 0,
-      "points": "2074",
-      "starts": "28",
-      "wins": "1",
-      "top5": "7",
-      "top10": "10",
-      "dnfs": "2",
-      "stageWins": "5"
-    },
-    "rank": "8"
   },
   {
     "car": "17",
     "driver": "Chris Buescher",
     "stats": {
       "mfr": 1,
-      "points": "2069",
-      "starts": "28",
+      "points": "3077",
+      "starts": "31",
       "wins": "3",
-      "top5": "7",
-      "top10": "13",
+      "top5": "8",
+      "top10": "14",
       "dnfs": "1",
       "stageWins": "1"
     },
-    "rank": "9"
-  },
-  {
-    "car": "20",
-    "driver": "Christopher Bell",
-    "stats": {
-      "mfr": 2,
-      "points": "2069",
-      "starts": "28",
-      "wins": "1",
-      "top5": "6",
-      "top10": "14",
-      "dnfs": "3",
-      "stageWins": "2"
-    },
-    "rank": "10"
-  },
-  {
-    "car": "22",
-    "driver": "Joey Logano",
-    "stats": {
-      "mfr": 1,
-      "points": "2068",
-      "starts": "28",
-      "wins": "1",
-      "top5": "9",
-      "top10": "14",
-      "dnfs": "4",
-      "stageWins": "3"
-    },
-    "rank": "11"
-  },
-  {
-    "car": "4",
-    "driver": "Kevin Harvick",
-    "stats": {
-      "mfr": 1,
-      "points": "2063",
-      "starts": "28",
-      "wins": "0",
-      "top5": "6",
-      "top10": "12",
-      "dnfs": "1",
-      "stageWins": "1"
-    },
-    "rank": "12"
+    "rank": "5"
   },
   {
     "car": "19",
     "driver": "Martin Truex Jr.",
     "stats": {
       "mfr": 2,
-      "points": "2056",
-      "starts": "28",
+      "points": "3075",
+      "starts": "31",
       "wins": "3",
       "top5": "9",
       "top10": "15",
       "dnfs": "2",
       "stageWins": "6"
     },
-    "rank": "13"
+    "rank": "6"
+  },
+  {
+    "car": "5",
+    "driver": "Kyle Larson",
+    "stats": {
+      "mfr": 0,
+      "points": "3073",
+      "starts": "31",
+      "wins": "3",
+      "top5": "13",
+      "top10": "15",
+      "dnfs": "7",
+      "stageWins": "5"
+    },
+    "rank": "7"
+  },
+  {
+    "car": "6",
+    "driver": "Brad Keselowski",
+    "stats": {
+      "mfr": 1,
+      "points": "3060",
+      "starts": "31",
+      "wins": "0",
+      "top5": "6",
+      "top10": "15",
+      "dnfs": "3",
+      "stageWins": "6"
+    },
+    "rank": "8"
+  },
+  {
+    "car": "45",
+    "driver": "Tyler Reddick",
+    "stats": {
+      "mfr": 2,
+      "points": "3058",
+      "starts": "31",
+      "wins": "2",
+      "top5": "9",
+      "top10": "13",
+      "dnfs": "3",
+      "stageWins": "5"
+    },
+    "rank": "9"
   },
   {
     "car": "23",
     "driver": "Bubba Wallace",
     "stats": {
       "mfr": 2,
-      "points": "2044",
-      "starts": "28",
+      "points": "3051",
+      "starts": "31",
       "wins": "0",
-      "top5": "4",
-      "top10": "7",
+      "top5": "5",
+      "top10": "8",
       "dnfs": "5",
       "stageWins": "0"
     },
-    "rank": "14"
+    "rank": "10"
+  },
+  {
+    "car": "1",
+    "driver": "Ross Chastain",
+    "stats": {
+      "mfr": 0,
+      "points": "3050",
+      "starts": "31",
+      "wins": "1",
+      "top5": "8",
+      "top10": "11",
+      "dnfs": "3",
+      "stageWins": "5"
+    },
+    "rank": "11"
+  },
+  {
+    "car": "8",
+    "driver": "Kyle Busch",
+    "stats": {
+      "mfr": 0,
+      "points": "3034",
+      "starts": "31",
+      "wins": "3",
+      "top5": "8",
+      "top10": "15",
+      "dnfs": "6",
+      "stageWins": "2"
+    },
+    "rank": "12"
+  },
+  {
+    "car": "22",
+    "driver": "Joey Logano",
+    "stats": {
+      "mfr": 1,
+      "points": "2111",
+      "starts": "31",
+      "wins": "1",
+      "top5": "9",
+      "top10": "14",
+      "dnfs": "5",
+      "stageWins": "3"
+    },
+    "rank": "13"
   },
   {
     "car": "47",
     "driver": "Ricky Stenhouse Jr.",
     "stats": {
       "mfr": 0,
-      "points": "2041",
-      "starts": "28",
+      "points": "2111",
+      "starts": "31",
       "wins": "1",
       "top5": "2",
-      "top10": "7",
+      "top10": "9",
       "dnfs": "2",
       "stageWins": "0"
     },
-    "rank": "15"
+    "rank": "14"
   },
   {
     "car": "34",
     "driver": "Michael McDowell",
     "stats": {
       "mfr": 1,
-      "points": "2023",
-      "starts": "28",
+      "points": "2103",
+      "starts": "31",
       "wins": "1",
-      "top5": "2",
-      "top10": "6",
-      "dnfs": "3",
-      "stageWins": "2"
-    },
-    "rank": "16"
-  },
-  {
-    "car": "54",
-    "driver": "Ty Gibbs",
-    "stats": {
-      "mfr": 2,
-      "points": "606",
-      "starts": "28",
-      "wins": "0",
       "top5": "2",
       "top10": "7",
       "dnfs": "3",
-      "stageWins": "0"
+      "stageWins": "2"
     },
-    "rank": "-"
+    "rank": "15"
+  },
+  {
+    "car": "4",
+    "driver": "Kevin Harvick",
+    "stats": {
+      "mfr": 1,
+      "points": "2103",
+      "starts": "31",
+      "wins": "0",
+      "top5": "6",
+      "top10": "13",
+      "dnfs": "1",
+      "stageWins": "1"
+    },
+    "rank": "16"
   },
   {
     "car": "9",
     "driver": "Chase Elliott",
     "stats": {
       "mfr": 0,
-      "points": "712",
-      "starts": "21",
+      "points": "822",
+      "starts": "24",
       "wins": "0",
       "top5": "7",
-      "top10": "12",
+      "top10": "14",
       "dnfs": "3",
       "stageWins": "1"
     },
@@ -274,8 +259,23 @@
     "driver": "Daniel Su\u00e1rez",
     "stats": {
       "mfr": 0,
-      "points": "597",
-      "starts": "28",
+      "points": "675",
+      "starts": "31",
+      "wins": "0",
+      "top5": "3",
+      "top10": "10",
+      "dnfs": "5",
+      "stageWins": "0"
+    },
+    "rank": "-"
+  },
+  {
+    "car": "54",
+    "driver": "Ty Gibbs",
+    "stats": {
+      "mfr": 2,
+      "points": "655",
+      "starts": "31",
       "wins": "0",
       "top5": "3",
       "top10": "8",
@@ -289,8 +289,8 @@
     "driver": "Alex Bowman",
     "stats": {
       "mfr": 0,
-      "points": "609",
-      "starts": "25",
+      "points": "673",
+      "starts": "28",
       "wins": "0",
       "top5": "4",
       "top10": "9",
@@ -304,28 +304,13 @@
     "driver": "AJ Allmendinger",
     "stats": {
       "mfr": 0,
-      "points": "557",
-      "starts": "28",
+      "points": "589",
+      "starts": "31",
       "wins": "0",
       "top5": "2",
       "top10": "5",
-      "dnfs": "3",
+      "dnfs": "4",
       "stageWins": "0"
-    },
-    "rank": "-"
-  },
-  {
-    "car": "2",
-    "driver": "Austin Cindric",
-    "stats": {
-      "mfr": 1,
-      "points": "493",
-      "starts": "28",
-      "wins": "0",
-      "top5": "0",
-      "top10": "3",
-      "dnfs": "3",
-      "stageWins": "1"
     },
     "rank": "-"
   },
@@ -334,11 +319,26 @@
     "driver": "Aric Almirola",
     "stats": {
       "mfr": 1,
-      "points": "491",
-      "starts": "28",
+      "points": "549",
+      "starts": "31",
       "wins": "0",
       "top5": "1",
       "top10": "3",
+      "dnfs": "4",
+      "stageWins": "1"
+    },
+    "rank": "-"
+  },
+  {
+    "car": "2",
+    "driver": "Austin Cindric",
+    "stats": {
+      "mfr": 1,
+      "points": "545",
+      "starts": "31",
+      "wins": "0",
+      "top5": "1",
+      "top10": "4",
       "dnfs": "4",
       "stageWins": "1"
     },
@@ -349,42 +349,12 @@
     "driver": "Justin Haley",
     "stats": {
       "mfr": 0,
-      "points": "473",
-      "starts": "28",
+      "points": "534",
+      "starts": "31",
       "wins": "0",
       "top5": "1",
-      "top10": "5",
-      "dnfs": "2",
-      "stageWins": "0"
-    },
-    "rank": "-"
-  },
-  {
-    "car": "43",
-    "driver": "Erik Jones",
-    "stats": {
-      "mfr": 0,
-      "points": "468",
-      "starts": "28",
-      "wins": "0",
-      "top5": "1",
-      "top10": "7",
-      "dnfs": "2",
-      "stageWins": "0"
-    },
-    "rank": "-"
-  },
-  {
-    "car": "7",
-    "driver": "Corey LaJoie",
-    "stats": {
-      "mfr": 0,
-      "points": "461",
-      "starts": "28",
-      "wins": "0",
-      "top5": "1",
-      "top10": "2",
-      "dnfs": "0",
+      "top10": "6",
+      "dnfs": "3",
       "stageWins": "0"
     },
     "rank": "-"
@@ -394,13 +364,43 @@
     "driver": "Ryan Preece",
     "stats": {
       "mfr": 1,
-      "points": "457",
-      "starts": "28",
+      "points": "529",
+      "starts": "31",
       "wins": "0",
       "top5": "1",
-      "top10": "1",
+      "top10": "2",
       "dnfs": "5",
       "stageWins": "1"
+    },
+    "rank": "-"
+  },
+  {
+    "car": "7",
+    "driver": "Corey LaJoie",
+    "stats": {
+      "mfr": 0,
+      "points": "527",
+      "starts": "31",
+      "wins": "0",
+      "top5": "2",
+      "top10": "3",
+      "dnfs": "0",
+      "stageWins": "0"
+    },
+    "rank": "-"
+  },
+  {
+    "car": "43",
+    "driver": "Erik Jones",
+    "stats": {
+      "mfr": 0,
+      "points": "508",
+      "starts": "31",
+      "wins": "0",
+      "top5": "1",
+      "top10": "7",
+      "dnfs": "3",
+      "stageWins": "0"
     },
     "rank": "-"
   },
@@ -409,27 +409,12 @@
     "driver": "Todd Gilliland",
     "stats": {
       "mfr": 1,
-      "points": "433",
-      "starts": "28",
+      "points": "481",
+      "starts": "31",
       "wins": "0",
       "top5": "0",
       "top10": "3",
-      "dnfs": "3",
-      "stageWins": "0"
-    },
-    "rank": "-"
-  },
-  {
-    "car": "3",
-    "driver": "Austin Dillon",
-    "stats": {
-      "mfr": 0,
-      "points": "400",
-      "starts": "28",
-      "wins": "0",
-      "top5": "1",
-      "top10": "6",
-      "dnfs": "8",
+      "dnfs": "4",
       "stageWins": "0"
     },
     "rank": "-"
@@ -439,12 +424,27 @@
     "driver": "Chase Briscoe",
     "stats": {
       "mfr": 1,
-      "points": "373",
-      "starts": "28",
+      "points": "440",
+      "starts": "31",
       "wins": "0",
       "top5": "3",
-      "top10": "6",
+      "top10": "7",
       "dnfs": "2",
+      "stageWins": "0"
+    },
+    "rank": "-"
+  },
+  {
+    "car": "3",
+    "driver": "Austin Dillon",
+    "stats": {
+      "mfr": 0,
+      "points": "432",
+      "starts": "31",
+      "wins": "0",
+      "top5": "1",
+      "top10": "6",
+      "dnfs": "10",
       "stageWins": "0"
     },
     "rank": "-"
@@ -454,12 +454,12 @@
     "driver": "Harrison Burton",
     "stats": {
       "mfr": 1,
-      "points": "356",
-      "starts": "28",
+      "points": "388",
+      "starts": "31",
       "wins": "0",
       "top5": "0",
       "top10": "2",
-      "dnfs": "4",
+      "dnfs": "5",
       "stageWins": "0"
     },
     "rank": "-"
@@ -469,12 +469,12 @@
     "driver": "Ty Dillon",
     "stats": {
       "mfr": 0,
-      "points": "276",
-      "starts": "28",
+      "points": "310",
+      "starts": "31",
       "wins": "0",
       "top5": "0",
       "top10": "0",
-      "dnfs": "5",
+      "dnfs": "6",
       "stageWins": "0"
     },
     "rank": "-"
@@ -484,7 +484,7 @@
     "driver": "Noah Gragson",
     "stats": {
       "mfr": 0,
-      "points": "293",
+      "points": "222",
       "starts": "21",
       "wins": "0",
       "top5": "0",
